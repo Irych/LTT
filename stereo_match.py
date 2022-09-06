@@ -31,10 +31,10 @@ def main():
 
     # disparity range is tuned for 'aloe' image pair
     window_size = 3
-    min_disp = 16
-    num_disp = 112-min_disp
-    stereo = cv.StereoSGBM_create(minDisparity = 0,
-                                  numDisparities = 256,
+    min_disp = 0
+    num_disp = 256
+    stereo = cv.StereoSGBM_create(minDisparity = min_disp,
+                                  numDisparities = num_disp,
                                   blockSize = 1,
                                   P1 = 40,
                                   P2 = 100,
